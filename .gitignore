@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local environment variables and sensitive configuration
+.env
+config.json
+secret_keys/
+
+# Local logs and runtime data
+*.log
+logs/
+runtime/
+
+# OS generated files
+.DS_Store
+Thumbs.db
