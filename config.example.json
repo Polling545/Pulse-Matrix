@@ -1,0 +1,16 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 9090,
+    "max_concurrency": 10000
+  },
+  "routing": {
+    "mode": "async_stream",
+    "buffer_size": 8192,
+    "timeout_seconds": 30
+  },
+  "telemetry": {
+    "enabled": true,
+    "log_level": "INFO"
+  }
+}
