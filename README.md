@@ -1,6 +1,4 @@
 # Pulse-Matrix
-High-concurrency async streaming gateway and core engine.
-# Pulse-Matrix
 
 High-concurrency async streaming gateway and core engine built with Python's standard asyncio library.
 
@@ -11,7 +9,7 @@ Pulse-Matrix features high-concurrency non-blocking TCP packet routing, configur
 ## Quick Start
 
 ### 1. Configure
-Ensure your config.json is properly set up in the root directory:
+Ensure your config.json is properly set up in the root directory (you can copy config.example.json as a reference):
 
 {
   "server": {
