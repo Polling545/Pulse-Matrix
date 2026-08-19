@@ -32,4 +32,5 @@ python pulse_matrix_core.py
 Simulate multi-client concurrent traffic and test packet round-trips:
 ```bash
 python client_test.py
+```
 
