@@ -23,12 +23,12 @@ Ensure your `config.json` is set up in the root directory. You can copy the prov
 ```bash
 cp config.example.json config.json
 ```
-2. Run the Server
+### 2. Run the Server
 Launch the core gateway engine:
 ```bash
 python pulse_matrix_core.py
 ```
-3. Run the Test Client (Demo Mode)
+### 3. Run the Test Client (Demo Mode)
 Simulate multi-client concurrent traffic and test packet round-trips:
 ```bash
 python client_test.py
