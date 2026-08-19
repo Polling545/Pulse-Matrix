@@ -1,0 +1,41 @@
+name: Pulse-Matrix CI Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-gateway:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Verify Configuration
+      run: |
+        if [ ! -f config.json ]; then
+          cp config.example.json config.json
+        fi
+
+    - name: Launch Gateway & Run Integration Test
+      run: |
+        # 后台启动核心网关
+        python pulse_matrix_core.py &
+        SERVER_PID=$!
+        
+        # 等待服务完全启动监听
+        sleep 2
+        
+        # 运行测试客户端进行压力与收发验证
+        python client_test.py
+        
+        # 测试完毕后安全关闭服务端
+        kill $SERVER_PID
