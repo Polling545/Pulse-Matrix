@@ -22,3 +22,12 @@ High-concurrency async streaming gateway and core engine built with Python's sta
 Ensure your `config.json` is set up in the root directory. You can copy the provided template to get started:
 ```bash
 cp config.example.json config.json
+```
+2. Run the Server
+Launch the core gateway engine:
+python pulse_matrix_core.py
+```
+3. Run the Test Client (Demo Mode)
+Simulate multi-client concurrent traffic and test packet round-trips:
+python client_test.py
+
